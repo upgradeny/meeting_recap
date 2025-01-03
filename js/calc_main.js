@@ -184,7 +184,7 @@ $(document).ready(function(){
 				jQuery('#pdf_c_cabinetry_type').text(cabinetry_type);
 				jQuery('#pdf_c_included_items').text(included_items);
 				jQuery('#pdf_c_top_priority').text(top_priority);
-				jQuery('#pdf_c_budget').text(budget);
+				jQuery('#pdf_c_budget').text('$ ' + budget);
 				jQuery('#pdf_c_delivery_start').text(delivery_start);
 				jQuery('#pdf_c_delivery_end').text(delivery_end);
 				
