@@ -51,10 +51,10 @@ $(document).ready(function(){
 			var rowHTML = `
 							<div class="flex_col basis_42 appliance_items_row">
 								<div class="flex_row_inp">
-									<div class="col-sm-2">
+									<div class="col-sm-2 p-0">
 										<input type="number" id="appliance_items_qty_${num}" class="number_req form-control appliance_items_qty" name="" value=""/>
 									</div>
-									<div class="col-sm-2">
+									<div class="col-sm-2 p-0">
 										<input type="text" id="appliance_items_size_${num}" list="list_appliance_items_size" class="number_req form-control appliance_items_size" name="appliance_items_size" value=""/>
 										<datalist id="list_appliance_items_size">
 											<option>12"</option>
@@ -69,7 +69,7 @@ $(document).ready(function(){
 											<option>60"</option>
 										</datalist>
 									</div>
-									<div class="col-sm-7">
+									<div class="col-sm-7 p-0">
 										<input type="text" id="appliance_items_list_${num}" list="list_appliance_items_list" class="number_req form-control appliance_items_list" name="appliance_items_list" value=""/>
 										<datalist id="list_appliance_items_list">
 											<option>Refrigerator/Freezer</option>
