@@ -256,7 +256,7 @@ select, #cmd{
 }
 
 .input_field_n_dollar{
-	flex-basis: 50%;
+	flex-basis: 50% !important;
 }
 .input_field_n_dollar input.form-control{
 	padding-left: 15px;
