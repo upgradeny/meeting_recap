@@ -25,7 +25,7 @@ body{
 	text-align: center;
 }
 .price_container{
-	max-width:700px;
+	max-width:520px;
 	margin:0 auto;
 }
 p,span,a,label,li, input::placeholder{
@@ -80,7 +80,7 @@ select{
 	flex-basis:50%;
 }
 .basis_15 label{
-	flex-basis:16%;
+	flex-basis:25 %;
 }
 .justify-center{
 	justify-content: center;
