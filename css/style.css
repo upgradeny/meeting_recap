@@ -374,6 +374,13 @@ button, input, optgroup, select, textarea {
 
 
 /*-------------------------- new styles start----------------------*/
+
+h2{
+	margin-top: 10px;
+}
+.appliance_items_row{
+	margin:10px 0;
+}
 input.form-control, select.form-control , input, select{
 	 height: 35px;
 }
