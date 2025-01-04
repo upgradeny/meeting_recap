@@ -299,7 +299,7 @@ select, #cmd{
     border: 0;
     background: #231f20;
     color: #fff;
-    font-size: 13px;
+    font-size: 18px;
     box-sizing: border-box;
     font-weight: bold;
     border-radius: 0;
@@ -382,7 +382,7 @@ h2{
 	margin:10px 0;
 }
 input.form-control, select.form-control , input, select{
-	 height: 35px;
+	 height: 35px !important;
 }
 .dollar_sign {
     padding: 5px 5px;
@@ -393,7 +393,7 @@ label {
 }
 
 .input_field_n_dollar .dollar_sign{
-	height: 35px;
+	height: 35px !important;
 	border-radius:5px;
 }
 
@@ -403,5 +403,9 @@ label {
 
 .basis_15{
 	flex-basis: 25%;
+}
+
+.minus, .btn_minus {
+    padding: 3px 14px 3px;
 }
 /*-------------------------- new styles end ----------------------*/
