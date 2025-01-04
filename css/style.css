@@ -401,7 +401,7 @@ label {
     gap: 10px;
 }
 
-.basis_15{
+.basis_15 label{
 	flex-basis: 25%;
 }
 
