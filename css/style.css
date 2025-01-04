@@ -400,4 +400,8 @@ label {
 .flex_col {
     gap: 10px;
 }
+
+.basis_15{
+	flex-basis: 25%;
+}
 /*-------------------------- new styles end ----------------------*/
