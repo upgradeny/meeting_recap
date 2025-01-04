@@ -43,12 +43,15 @@ input,select{
 	font-size:14px;
 }
 input.form-control, select.form-control{
-	height: auto;
+	 height: auto; 
     padding: 2px 5px;
 	color:#231f20;
 	font-size:14px;
 	
 }
+
+
+
 select{
 	font-size:14px !important;
 }
@@ -368,3 +371,26 @@ button, input, optgroup, select, textarea {
 .btn_l_c.active{
 	background: #eb2227 !important;
 }
+
+
+/*-------------------------- new styles start----------------------*/
+input.form-control, select.form-control , input, select{
+	 height: 35px;
+}
+.dollar_sign {
+    padding: 5px 5px;
+}
+
+label {
+    font-size: 16px;
+}
+
+.input_field_n_dollar .dollar_sign{
+	height: 35px;
+	border-radius:5px;
+}
+
+.flex_col {
+    gap: 10px;
+}
+/*-------------------------- new styles end ----------------------*/
