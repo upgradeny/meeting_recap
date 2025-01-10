@@ -46,6 +46,18 @@ $(document).ready(function(){
 			  }
 			});
 			
+			function monthInputFormatConverter(monthInput){
+				if (monthInput) {
+					const date = new Date(monthInput + "-01"); // Add a day to make it a valid date
+					const options = { year: 'numeric', month: 'long' };
+					const formattedDate = date.toLocaleDateString('en-US', options);
+					return formattedDate;
+				}else{
+					return '';
+				}
+			}
+			
+			
 			function appliances_rowHTML(num){
 					
 			var rowHTML = `
@@ -172,13 +184,21 @@ $(document).ready(function(){
 
 				//----------------------   Cabinetry ---------------------------
 				
+				var project_name = jQuery('#project_name').val();
 				var cabinetry_type = jQuery('#cabinetry_type').val();
 				var included_items = jQuery('#included_items').val();
 				var top_priority = jQuery('#top_priority').val();
 				var budget = jQuery('#budget').val();
 				//console.log(jQuery('#delivery_start').val())
-				var delivery_start = jQuery('#delivery_start').val();
-				var delivery_end = jQuery('#delivery_end').val();
+				var delivery_start = monthInputFormatConverter( jQuery('#delivery_start').val() );
+				var delivery_end = monthInputFormatConverter( jQuery('#delivery_end').val() );
+				
+				
+				if (project_name) {
+					jQuery('#pdf_consultation_recap').text(`Consultation Recap - ${project_name}`);
+				} else {
+					jQuery('#pdf_consultation_recap').text(`Consultation Recap`);
+				}
 				
 				
 				jQuery('#pdf_c_cabinetry_type').text(cabinetry_type);
