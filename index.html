@@ -41,7 +41,7 @@
 
 			<form id="priceCalcForm">
 				<div class="row input_field ">
-					<div class="col-sm-6">
+					<div class="col-sm-12 basis_15">
 						<div class="flex_row_inp">
 							<label>
 								Project name
@@ -120,7 +120,7 @@
 					
 						<div class="flex_row_inp">
 							<label>
-								Budget
+								Cabinet Budget
 							</label>
 							
 							<div class="input_field_n_dollar">
@@ -391,12 +391,12 @@
 		}
 		
 		#editor1 .width_logo , #editor1 #logo_print{
-				width:161px;
+				width:240px;
 			}
 			
 			#editor1 h1{
 				font-family: 'Montserrat' , 'Bebas Neue' , 'Mont', sans-serif ;
-				font-size: 64px;
+				font-size: 72px;
 				font-weight: 700;
 				line-height: 78px;
 				letter-spacing: 0em;
@@ -554,7 +554,17 @@
 		#editor1 .flex_table.w_96 .td_value.text-left{
 			text-align:left !important;
 		}
-		#editor1 #terms_conditions ol li{
+		
+		#editor1 #terms_conditions h3{
+			font-size: 48px;
+			font-weight: 700;
+			line-height: 60px;
+			letter-spacing: 0em;
+			text-align: center;
+			color: red;
+		}
+		
+		#editor1 #terms_conditions ol li , #editor1 #terms_conditions p{
 			font-size: 33px;
 			font-weight: 400;
 			line-height: 52px;
@@ -589,6 +599,10 @@
 		#editor1 .inline_flex {
 			display: inline-flex
 		}
+		.designer_row{
+			display: flex;
+			justify-content: space-between;
+		}
 		#editor1 .designer_para{
 			font-size: 33px;
 			font-weight: 400;
@@ -619,18 +633,19 @@
 			flex-direction: column;
 			gap: 5px;
 		}
-		#editor1 .text-bold{
-			font-weight : 700;
-		}
+
 		.m_top_20{
 			margin-top: 20px;
+		}
+		.text-center{
+			text-align:center;
 		}
 	</style>
 		
 			<div class="full_width bck_light_grey">
 				<div id="head">
 					<div class="flex">
-						<h1 class="">Meeting Recap Document</h1>
+						<h1 class="" id="pdf_consultation_recap">Consultation Recap</h1>
 						<!--<br/> <span id="pdf_main_date">Date</span>-->
 					</div>
 					<div class="ml-auto flex">
@@ -656,7 +671,7 @@
 						<div class="flex_table">
 						
 								
-								<div> Budget : 	<span id="pdf_c_budget" class="td_value"> </span>   </div>
+								<div> Cabinet Budget : 	<span id="pdf_c_budget" class="td_value"> </span>   </div>
 								<div class="border_0"> Approximate Delivery : 	<span id="pdf_c_delivery_start" class="td_value"> </span> 
 									to <br/>
 									<span id="pdf_c_delivery_end" class="td_value"> </span>      
@@ -702,22 +717,26 @@
 					</div>
 				</div>
 				<br/> <br/>
-				<div class="flex_center m_top_20">
-						
-								 					
-							<p class="designer_para"> Designer : <span id="pdf_c_kitchen_designer_value" class="td_value text-left text-bold"> </span> 				</p>
-									
-					
-				</div>
 				
-				<div class="flex_center" class="table_container">
-						<div class="inline_flex gap-25">
+				<div class="" class="table_container">
+						<div class="designer_row">
+						
+						<div class="designer_para"> Designer : <span id="pdf_c_kitchen_designer_value" class="td_value text-left text-bold"> </span> 				</div>
 								 					
-							<p class="designer_para"> Email : <span id="pdf_c_kitchen_designer_email" class="td_value text-left text-bold"> </span> 	</p>
+							<div class="designer_para"> Email : <span id="pdf_c_kitchen_designer_email" class="td_value text-left text-bold"> </span> 	</div>
 							
-							<p class="designer_para"> Phone/Ext : <span id="pdf_c_kitchen_designer_phone" class="td_value text-left text-bold"> </span> 	</p>
+							<div class="designer_para"> Phone/Ext : <span id="pdf_c_kitchen_designer_phone" class="td_value text-left text-bold"> </span> 	</div>
 									
 					</div>
+				</div>
+				<br/>
+				<div id="terms_conditions" class="table_container">
+					<h3 class="text-center red">Your vision, our passion!</h3>
+				
+
+						<p>The pricing provided in this document is for reference purposes only. Taxes are not included, and all prices are subject to change based on market conditions, availability, and other factors.</p>
+						
+					
 				</div>
 				
 				
@@ -728,7 +747,7 @@
 	
 	 
 	<script>
-		/*
+	/*
 		$(document).ready(function(){
 			 var date = new Date();
   var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
@@ -738,8 +757,8 @@
 			});
 			jQuery(".date_picker_input").datepicker('setDate', today);
 			
-		});
-  */
+		});	
+		*/
 	 </script>
 
 </body>
