@@ -44,6 +44,20 @@
 					<div class="col-sm-6">
 						<div class="flex_row_inp">
 							<label>
+								Project name
+							</label>
+							<div class="">
+								<input type="text" id="project_name" class="number_req form-control project_name" name ="project_name" value=""/>
+							</div>	
+						</div>
+					</div>
+				</div>	
+				
+				<!--
+				<div class="row input_field ">
+					<div class="col-sm-6">
+						<div class="flex_row_inp">
+							<label>
 								Date
 							</label>
 							<div class="">
@@ -52,13 +66,13 @@
 						</div>
 					</div>
 				</div>	
-								
+				-->				
 				<div class="row input_field">
 					<div class="col-sm-12">
 						<h2 class="text-left inline_block text_upper">Summary</h2>
 					</div>
 					
-					<div class="col-sm-6 flex_col basis_42">
+					<div class="col-sm-12 flex_col basis_42">
 						
 						
 						<div class="flex_row_inp">
@@ -96,6 +110,9 @@
 						</div>
 
 					</div>
+				</div>
+
+				<div class="row input_field">
 					
 					<div class="col-sm-6 flex_col basis_42">
 					
@@ -109,6 +126,20 @@
 								<input type="text" id="budget" class="number_req form-control budget" name ="budget" value=""/>
 							</div>
 						</div>
+
+						<div class="flex_row_inp">
+							<label>
+								Installation
+							</label>
+							
+							<div class="">
+								
+								<input type="text" id="installation" class="number_req form-control installation" name ="installation" value="TBD"/>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 flex_col basis_42">
+						
 						
 						<div class="flex_row_inp align-center">
 							<label>
@@ -116,12 +147,19 @@
 							</label>
 							<div class="flex_col">					
 							
-								<input type="date" id="delivery_start" class="form-control" name="delivery_start" value="" 
-						   min="2025-01-01" max="2030-12-31" />
+								<input type="month" id="delivery_start" class="form-control" name="delivery_start" value="" 
+						   min="2025-01" max="2030-12" />
 						   
-								<input type="date" id="delivery_end" class="form-control" name="delivery_end" value="" 
-						   min="2025-01-01" max="2030-12-31" />
-						    </div>
+								<input type="month" id="delivery_end" class="form-control" name="delivery_end" value="" 
+						   min="2025-01" max="2030-12" />
+
+							<!--
+								<input type="text" id="main_date_1" class="number_req form-control main_date date_picker_input" name ="main_date" value="" required/>
+
+								<input type="text" id="main_date_2" class="number_req form-control main_date date_picker_input" name ="main_date" value="" required/>
+						 	  -->
+							
+							</div>
 						</div>
 		
 						
