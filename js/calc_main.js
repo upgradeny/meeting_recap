@@ -239,24 +239,42 @@ $(document).ready(function(){
 				jQuery('#pdf_c_kitchen_designer_email').text(designerData.email);
 				jQuery('#pdf_c_kitchen_designer_phone').text(designerData.phone);
 				
-				var appliances_items_rows =  `<div class="flex_table appliances_list">
-							<div class="justify-normal flex_7"> <span id="" class="td_value text-left">Qty </span> </div>
-							<div class="justify-normal flex_7"> <span id="" class="td_value text-left">Size  </span> </div>
-							<div class="justify-normal flex_1"> <span id="" class="td_value text-left">Item </span> </div>
-						</div>`;
 				
+				
+				var appliances_items_rows =  `<h2>APPLIANCE LIST:</h2><br/>
+												<div class="flex justify-space-between">
+												<div class="flex_table flex_col table_bck">
+													<div class="appliances_list">
+														<div class="flex_12 border_0"> <span id="" class="td_value text-left">Qty </span> </div>
+														<div class="flex_12 border_0"> <span id="" class="td_value text-left">Size  </span> </div>
+														<div class="flex_1 border_0"> <span id="" class="td_value text-left">Item </span> </div>
+													</div>`;
+				var counter_appliances = 0;
 				jQuery('.appliance_items_row').each(function () {
-
+						counter_appliances++;
 						console.log('appliances list item  ---- ')
-						console.log(this)
+						console.log(this);
 						
-						appliances_items_rows += `<div class="flex_table appliances_list">
-							<div class="justify-normal flex_7"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_qty').val()} </span> </div>
-							<div class="justify-normal flex_7"> <span id="" class="td_value text-left">${jQuery(this).find('.appliance_items_size').val()}  </span> </div>
-							<div class="justify-normal flex_1"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_list').val()} </span> </div>
+						if (counter_appliances == 6) {
+							appliances_items_rows += `</div><div class="flex_table flex_col table_bck">
+													<div class="appliances_list">
+														<div class="flex_12 border_0"> <span id="" class="td_value text-left">Qty </span> </div>
+														<div class="flex_12 border_0"> <span id="" class="td_value text-left">Size  </span> </div>
+														<div class="flex_1 border_0"> <span id="" class="td_value text-left">Item </span> </div>
+													</div>`; // end flextable and start new flextable
+						}
+						
+						appliances_items_rows += `<div class="appliances_list">
+							<div class="flex_12 border_0"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_qty').val()} </span> </div>
+							<div class="flex_12 border_0"> <span id="" class="td_value text-left">${jQuery(this).find('.appliance_items_size').val()}  </span> </div>
+							<div class="flex_1 border_0"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_list').val()} </span> </div>
 						</div>`
 
 				});
+				
+				appliances_items_rows += '</div></div>';
+				
+
 				
 				jQuery('#editor #appliances').empty();;
 				jQuery('#editor #appliances').append(appliances_items_rows);
