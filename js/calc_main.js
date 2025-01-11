@@ -189,9 +189,10 @@ $(document).ready(function(){
 				var included_items = jQuery('#included_items').val();
 				var top_priority = jQuery('#top_priority').val();
 				var budget = jQuery('#budget').val();
+				var installation = jQuery('#installation').val();
 				//console.log(jQuery('#delivery_start').val())
 				var delivery_start = monthInputFormatConverter( jQuery('#delivery_start').val() );
-				var delivery_end = monthInputFormatConverter( jQuery('#delivery_end').val() );
+				//var delivery_end = monthInputFormatConverter( jQuery('#delivery_end').val() );
 				
 				
 				if (project_name) {
@@ -205,8 +206,9 @@ $(document).ready(function(){
 				jQuery('#pdf_c_included_items').text(included_items);
 				jQuery('#pdf_c_top_priority').text(top_priority);
 				jQuery('#pdf_c_budget').text('$ ' + budget);
+				jQuery('#pdf_c_installation').text(installation);
 				jQuery('#pdf_c_delivery_start').text(delivery_start);
-				jQuery('#pdf_c_delivery_end').text(delivery_end);
+				//jQuery('#pdf_c_delivery_end').text(delivery_end);
 				
 				var whats_next_for_you = jQuery('#whats_next_for_you').val();
 				var whats_next_for_upgrade = jQuery('#whats_next_for_upgrade').val();
@@ -237,17 +239,21 @@ $(document).ready(function(){
 				jQuery('#pdf_c_kitchen_designer_email').text(designerData.email);
 				jQuery('#pdf_c_kitchen_designer_phone').text(designerData.phone);
 				
-				var appliances_items_rows = '';
+				var appliances_items_rows =  `<div class="flex_table appliances_list">
+							<div class="justify-normal flex_7"> <span id="" class="td_value text-left">Qty </span> </div>
+							<div class="justify-normal flex_7"> <span id="" class="td_value text-left">Size  </span> </div>
+							<div class="justify-normal flex_1"> <span id="" class="td_value text-left">Item </span> </div>
+						</div>`;
 				
 				jQuery('.appliance_items_row').each(function () {
 
 						console.log('appliances list item  ---- ')
 						console.log(this)
 						
-						appliances_items_rows += `<div class="flex_table w_96 appliances_list">
-							<div class="justify-normal flex_12"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_qty').val()} </span> </div>
-							<div class="justify-normal flex_12"> <span id="" class="td_value text-left">${jQuery(this).find('.appliance_items_size').val()}  </span> </div>
-							<div class="justify-normal flex_72"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_list').val()} </span> </div>
+						appliances_items_rows += `<div class="flex_table appliances_list">
+							<div class="justify-normal flex_7"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_qty').val()} </span> </div>
+							<div class="justify-normal flex_7"> <span id="" class="td_value text-left">${jQuery(this).find('.appliance_items_size').val()}  </span> </div>
+							<div class="justify-normal flex_1"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_list').val()} </span> </div>
 						</div>`
 
 				});
