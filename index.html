@@ -151,10 +151,10 @@
 							
 								<input type="month" id="delivery_start" class="form-control" name="delivery_start" value="" 
 						   min="2025-01" max="2030-12" />
-						   
+						   <!--
 								<input type="month" id="delivery_end" class="form-control" name="delivery_end" value="" 
 						   min="2025-01" max="2030-12" />
-
+-->
 							<!--
 								<input type="text" id="main_date_1" class="number_req form-control main_date date_picker_input" name ="main_date" value="" required/>
 
@@ -405,12 +405,12 @@
 			}
 			#editor1 h2{
 				font-family: 'Montserrat' , 'Bebas Neue' , 'Mont', sans-serif ;
-				font-size: 58px;
+				font-size: 48px;
 				font-weight: 700;
-				line-height: 71px;
+				line-height: 52px;
 				letter-spacing: 0em;
 				text-align: left;
-
+				margin:0;
 				color:#000;
 			}
 			
@@ -509,6 +509,7 @@
 		}
 		#editor1 .flex_table{
 			padding:0 20px 15px;
+			display:flex;
 		}
 		#editor1 .flex_table div {
 			padding: 7px 10px;
@@ -604,9 +605,9 @@
 			justify-content: space-between;
 		}
 		#editor1 .designer_para{
-			font-size: 33px;
+			font-size: 28px;
 			font-weight: 400;
-			line-height: 52px;
+			line-height: 32px;
 			letter-spacing: 0em;
 			text-align: left;
 			color:#565656;
@@ -625,6 +626,13 @@
 		#editor1 .flex_12{
 			flex-basis: 12%;
 		}
+		#editor1 .flex_7{
+			flex-basis: 7%;
+		}
+		#editor1 .flex_1{
+			flex: 1;
+		}
+		
 		#editor1 .flex_72{
 			flex-basis: 72%;
 		}
@@ -639,6 +647,9 @@
 		}
 		.text-center{
 			text-align:center;
+		}
+		#specs{
+			display: flex;
 		}
 	</style>
 		
@@ -658,28 +669,54 @@
 			</div>
 			<div id="main">
 				
-				
+				<br/>
 				<div id="specs" class="table_container">
-					<h2>SUMMARY</h2>
-					<div id="specs_div" class="table_bck">
-						<div class="flex_table">
+					
+					
+						<div class="flex_table flex_col">
+							<h2>SUMMARY</h2>
+							<div id="specs_div" class="table_bck flex_col">
 								<div> Cabinetry Type: :  <span id="pdf_c_cabinetry_type" class="td_value"> </span> 				</div>
 								<div> Included Items : <span id="pdf_c_included_items" class="td_value">  </span> 				</div>
-								<div class="border_0"> Top Priority :  <span id="pdf_c_top_priority" class="td_value"> </span> 					</div>
-								
-						</div>
-						<div class="flex_table">
-						
-								
+								<div > Top Priority :  <span id="pdf_c_top_priority" class="td_value"> </span> 					</div>
 								<div> Cabinet Budget : 	<span id="pdf_c_budget" class="td_value"> </span>   </div>
-								<div class="border_0"> Approximate Delivery : 	<span id="pdf_c_delivery_start" class="td_value"> </span> 
-									to <br/>
-									<span id="pdf_c_delivery_end" class="td_value"> </span>      
-								</div>
-								
+								<div> Installation : 	<span id="pdf_c_installation" class="td_value"> </span>   </div>
+								<div class="border_0"> Approximate Delivery : 	<span id="pdf_c_delivery_start" class="td_value"> </span> </div>
+							</div>
 								
 						</div>
-					</div>
+						<div class="flex_table flex_col">
+						
+							<div id="terms_conditions" class="table_container flex_col border_0">
+								<h2>WHAT'S NEXT</h2>
+								<div id="payment_sch_div" class="table_bck flex_col border_0">
+									
+										<div class="justify-normal"> For You : <span id="pdf_c_whats_next_for_you" class="td_value text-left"> </span> </div>
+										<div class="justify-normal border_0"> For Upgrade : <span id="pdf_c_whats_next_for_upgrade" class="td_value text-left">  </span> </div>
+									
+								</div>
+							</div>	
+							
+							<div id="payment_sch" class="table_container flex_col border_0">
+								<h2>TIMELINE</h2>
+								<div id="payment_sch_div" class="table_bck flex_col border_0">
+							
+														
+									<div> 1. Initial Design : <span id="pdf_c_initial_design" class="td_value text-left"> </span> 				</div>
+									
+									<div> 2. Revisions :  <span id="pdf_c_revisions" class="td_value text-left"> </span> 				</div>
+									
+									<div class="border_0"> 3. Approved Plan : <span id="pdf_c_approved_plan" class="td_value text-left">  </span> 					</div>	
+									
+							
+							
+								</div>
+							</div>
+								
+								
+								
+						
+						</div>
 				</div>
 				
 				<div id="terms_conditions" class="table_container">
@@ -689,33 +726,11 @@
 					</div>
 				</div>
 				
-				<div id="terms_conditions" class="table_container">
-					<h2>WHAT'S NEXT</h2>
-					<div id="payment_sch_div" class="table_bck">
-						<div class="flex_table w_96">
-							<div class="justify-normal"> For You : <span id="pdf_c_whats_next_for_you" class="td_value text-left"> </span> </div>
-							<div class="justify-normal border_0"> For Upgrade : <span id="pdf_c_whats_next_for_upgrade" class="td_value text-left">  </span> </div>
-						</div>
-					</div>
-				</div>
 				
 				
 				
-				<div id="payment_sch" class="table_container">
-					<h2>TIMELINE</h2>
-					<div id="payment_sch_div" class="table_bck">
-						<div class="flex_table w_96">
-								 					
-							<div> 1. Initial Design : <span id="pdf_c_initial_design" class="td_value text-left"> </span> 				</div>
-							
-							<div> 2. Revisions :  <span id="pdf_c_revisions" class="td_value text-left"> </span> 				</div>
-							
-							<div class="border_0"> 3. Approved Plan : <span id="pdf_c_approved_plan" class="td_value text-left">  </span> 					</div>	
-								
-						</div>
-						
-					</div>
-				</div>
+				
+				
 				<br/> <br/>
 				
 				<div class="" class="table_container">
