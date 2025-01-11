@@ -508,8 +508,10 @@
 			
 		}
 		#editor1 .flex_table{
-			padding:0 20px 15px;
+			
+			padding:10px 0;
 			display:flex;
+			justify-content: flex-start;
 		}
 		#editor1 .flex_table div {
 			padding: 7px 10px;
@@ -541,6 +543,11 @@
 			letter-spacing: 0em;
 			text-align: left;
 			color:#565656;
+			margin: 0;
+			margin-top:18px;
+		}
+		#editor1 .flex_table div:last-child{
+			margin: 0;
 		}
 		#editor1 .flex_table .td_value{
 			text-align:right !important;
@@ -651,6 +658,12 @@
 		#specs{
 			display: flex;
 		}
+		.justify-start{
+			justify-content: flex-start;
+		}
+		.justify-space-between{
+			justify-content: space-between;
+		}
 	</style>
 		
 			<div class="full_width bck_light_grey">
@@ -670,11 +683,12 @@
 			<div id="main">
 				
 				<br/>
-				<div id="specs" class="table_container">
+				<div id="specs" class="table_container justify-space-between">
 					
 					
 						<div class="flex_table flex_col">
 							<h2>SUMMARY</h2>
+							<br/>
 							<div id="specs_div" class="table_bck flex_col">
 								<div> Cabinetry Type: :  <span id="pdf_c_cabinetry_type" class="td_value"> </span> 				</div>
 								<div> Included Items : <span id="pdf_c_included_items" class="td_value">  </span> 				</div>
@@ -682,23 +696,24 @@
 								<div> Cabinet Budget : 	<span id="pdf_c_budget" class="td_value"> </span>   </div>
 								<div> Installation : 	<span id="pdf_c_installation" class="td_value"> </span>   </div>
 								<div class="border_0"> Approximate Delivery : 	<span id="pdf_c_delivery_start" class="td_value"> </span> </div>
-							</div>
-								
+							</div>		
 						</div>
 						<div class="flex_table flex_col">
 						
 							<div id="terms_conditions" class="table_container flex_col border_0">
 								<h2>WHAT'S NEXT</h2>
+								<br/>
 								<div id="payment_sch_div" class="table_bck flex_col border_0">
 									
 										<div class="justify-normal"> For You : <span id="pdf_c_whats_next_for_you" class="td_value text-left"> </span> </div>
-										<div class="justify-normal border_0"> For Upgrade : <span id="pdf_c_whats_next_for_upgrade" class="td_value text-left">  </span> </div>
+										<div class="justify-normal "> For Upgrade : <span id="pdf_c_whats_next_for_upgrade" class="td_value text-left">  </span> </div>
 									
 								</div>
 							</div>	
 							
 							<div id="payment_sch" class="table_container flex_col border_0">
 								<h2>TIMELINE</h2>
+								<br/>
 								<div id="payment_sch_div" class="table_bck flex_col border_0">
 							
 														
@@ -706,7 +721,7 @@
 									
 									<div> 2. Revisions :  <span id="pdf_c_revisions" class="td_value text-left"> </span> 				</div>
 									
-									<div class="border_0"> 3. Approved Plan : <span id="pdf_c_approved_plan" class="td_value text-left">  </span> 					</div>	
+									<div class=""> 3. Approved Plan : <span id="pdf_c_approved_plan" class="td_value text-left">  </span> 					</div>	
 									
 							
 							
@@ -718,12 +733,10 @@
 						
 						</div>
 				</div>
-				
-				<div id="terms_conditions" class="table_container">
-					<h2>APPLIANCE LIST:</h2>
-					<div id="appliances" class="table_bck flex_col">
-						
-					</div>
+				<br/><br/>
+				<div id="appliances" class="table_container flex_col">
+					
+					
 				</div>
 				
 				
@@ -732,7 +745,7 @@
 				
 				
 				<br/> <br/>
-				
+				<br/> <br/>
 				<div class="" class="table_container">
 						<div class="designer_row">
 						
