@@ -57,6 +57,15 @@ $(document).ready(function(){
 				}
 			}
 			
+			// to check for non empty input fields of specific class
+			function countNonEmptyInputs(selector) {
+				return jQuery(selector).filter(function() {
+					return this.value.trim() !== ''; // Checks if the input field is not empty
+				}).length;
+			}
+
+
+			
 			
 			function appliances_rowHTML(num){
 					
@@ -205,7 +214,7 @@ $(document).ready(function(){
 				jQuery('#pdf_c_cabinetry_type').text(cabinetry_type);
 				jQuery('#pdf_c_included_items').text(included_items);
 				jQuery('#pdf_c_top_priority').text(top_priority);
-				jQuery('#pdf_c_budget').text('$ ' + budget);
+				jQuery('#pdf_c_budget').text('$ ' + numberWithCommas(budget));
 				jQuery('#pdf_c_installation').text(installation);
 				jQuery('#pdf_c_delivery_start').text(delivery_start);
 				//jQuery('#pdf_c_delivery_end').text(delivery_end);
@@ -231,7 +240,7 @@ $(document).ready(function(){
 				var kitchen_designer = jQuery('#kitchen_designer').val();
 				var designerData = designer_info[ jQuery('#kitchen_designer option:selected').attr('name') ];
 
-				console.log(designerData.email);
+				//console.log(designerData.email);
 
 				
 				
@@ -240,35 +249,39 @@ $(document).ready(function(){
 				jQuery('#pdf_c_kitchen_designer_phone').text(designerData.phone);
 				
 				
+				var NonEmptyInputs = countNonEmptyInputs('.appliance_items_list');  // count how many non emoty inputs
+				var half_of_NonEmptyInputs = Math.ceil(NonEmptyInputs/2);
+				var appliances_split_factor = NonEmptyInputs <= 10 ?  half_of_NonEmptyInputs = 6 : half_of_NonEmptyInputs = half_of_NonEmptyInputs;
+				console.log(NonEmptyInputs , appliances_split_factor);
 				
 				var appliances_items_rows =  `<h2>APPLIANCE LIST:</h2><br/>
 												<div class="flex justify-space-between">
 												<div class="flex_table flex_col table_bck">
 													<div class="appliances_list">
-														<div class="flex_12 border_0"> <span id="" class="td_value text-left">Qty </span> </div>
-														<div class="flex_12 border_0"> <span id="" class="td_value text-left">Size  </span> </div>
-														<div class="flex_1 border_0"> <span id="" class="td_value text-left">Item </span> </div>
+														<div class="flex_12 border_0"> <span id="" class="td_value text-left text-bold">Qty </span> </div>
+														<div class="flex_12 border_0"> <span id="" class="td_value text-left text-bold">Size  </span> </div>
+														<div class="flex_1 border_0"> <span id="" class="td_value text-left text-bold">Item </span> </div>
 													</div>`;
 				var counter_appliances = 0;
 				jQuery('.appliance_items_row').each(function () {
 						counter_appliances++;
-						console.log('appliances list item  ---- ')
-						console.log(this);
-						
-						if (counter_appliances == 6) {
-							appliances_items_rows += `</div><div class="flex_table flex_col table_bck">
-													<div class="appliances_list">
-														<div class="flex_12 border_0"> <span id="" class="td_value text-left">Qty </span> </div>
-														<div class="flex_12 border_0"> <span id="" class="td_value text-left">Size  </span> </div>
-														<div class="flex_1 border_0"> <span id="" class="td_value text-left">Item </span> </div>
-													</div>`; // end flextable and start new flextable
-						}
-						
+						//console.log('appliances list item  ---- ')
+						//console.log(this);
+
 						appliances_items_rows += `<div class="appliances_list">
 							<div class="flex_12 border_0"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_qty').val()} </span> </div>
 							<div class="flex_12 border_0"> <span id="" class="td_value text-left">${jQuery(this).find('.appliance_items_size').val()}  </span> </div>
 							<div class="flex_1 border_0"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_list').val()} </span> </div>
 						</div>`
+						
+						if (counter_appliances == appliances_split_factor) {
+							appliances_items_rows += `</div><div class="flex_table flex_col table_bck">
+													<div class="appliances_list">
+														<div class="flex_12 border_0"> <span id="" class="td_value text-left text-bold">Qty </span> </div>
+														<div class="flex_12 border_0"> <span id="" class="td_value text-left text-bold">Size  </span> </div>
+														<div class="flex_1 border_0"> <span id="" class="td_value text-left text-bold">Item </span> </div>
+													</div>`; // end flextable and start new flextable
+						}
 
 				});
 				
