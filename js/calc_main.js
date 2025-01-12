@@ -251,7 +251,7 @@ $(document).ready(function(){
 				
 				var NonEmptyInputs = countNonEmptyInputs('.appliance_items_list');  // count how many non emoty inputs
 				var half_of_NonEmptyInputs = Math.ceil(NonEmptyInputs/2);
-				var appliances_split_factor = NonEmptyInputs <= 10 ?  half_of_NonEmptyInputs = 6 : half_of_NonEmptyInputs = half_of_NonEmptyInputs;
+				var appliances_split_factor = NonEmptyInputs <= 10 ?  half_of_NonEmptyInputs = 5 : half_of_NonEmptyInputs = half_of_NonEmptyInputs;
 				console.log(NonEmptyInputs , appliances_split_factor);
 				
 				var appliances_items_rows =  `<h2>APPLIANCE LIST:</h2><br/>
@@ -264,15 +264,9 @@ $(document).ready(function(){
 													</div>`;
 				var counter_appliances = 0;
 				jQuery('.appliance_items_row').each(function () {
-						counter_appliances++;
+						
 						//console.log('appliances list item  ---- ')
 						//console.log(this);
-
-						appliances_items_rows += `<div class="appliances_list">
-							<div class="flex_12 border_0"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_qty').val()} </span> </div>
-							<div class="flex_12 border_0"> <span id="" class="td_value text-left">${jQuery(this).find('.appliance_items_size').val()}  </span> </div>
-							<div class="flex_1 border_0"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_list').val()} </span> </div>
-						</div>`
 						
 						if (counter_appliances == appliances_split_factor) {
 							appliances_items_rows += `</div><div class="flex_table flex_col table_bck">
@@ -282,6 +276,14 @@ $(document).ready(function(){
 														<div class="flex_1 border_0"> <span id="" class="td_value text-left text-bold">Item </span> </div>
 													</div>`; // end flextable and start new flextable
 						}
+
+						appliances_items_rows += `<div class="appliances_list">
+							<div class="flex_12 border_0"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_qty').val()} </span> </div>
+							<div class="flex_12 border_0"> <span id="" class="td_value text-left">${jQuery(this).find('.appliance_items_size').val()}  </span> </div>
+							<div class="flex_1 border_0"> <span id="" class="td_value text-left"> ${jQuery(this).find('.appliance_items_list').val()} </span> </div>
+						</div>`
+						
+						counter_appliances++;
 
 				});
 				
