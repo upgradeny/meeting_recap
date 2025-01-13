@@ -147,23 +147,23 @@ $(document).ready(function(){
 					
 					faigy : {
 						email : "faigy@upgradeny.com" , 
-						phone : "845-426-1400-202"
+						phone : "845-426-1400 x 202"
 					} , 
 					rivka : {
 						email : "rivka@upgradeny.com" , 
-						phone : "845-426-1400-204"
+						phone : "845-426-1400 x 204"
 					} ,
 					rachel : {
 						email : "rachel@upgradeny.com" , 
-						phone : "845-426-1400-203"
+						phone : "845-426-1400 x 203"
 					} ,
 					aliza : {
 						email : "aliza@upgradeny.com" , 
-						phone : "845-426-1400-205"
+						phone : "845-426-1400 x 205"
 					} , 
 					lazer : {
 						email : "lazer@upgradesny.com" , 
-						phone : "845-426-1400-201"
+						phone : "845-426-1400 x 201"
 					}
 					
 
