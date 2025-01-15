@@ -205,7 +205,7 @@ $(document).ready(function(){
 				
 				
 				if (project_name) {
-					jQuery('#pdf_consultation_recap').text(`Consultation Recap - ${project_name}`);
+					jQuery('#pdf_consultation_recap').text(`Consultation Recap <br/> <span class="heading_project_name" > ${project_name} </span>`);
 				} else {
 					jQuery('#pdf_consultation_recap').text(`Consultation Recap`);
 				}
