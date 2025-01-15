@@ -693,6 +693,29 @@
 			margin-top: 0 !important;
 			padding-top: 0 !important;
 		}
+		
+		#editor1 #specs_div {
+			height: 100%;
+		}
+
+		#editor1 #specs_div_2 {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			padding: 0;
+			justify-content: space-between;
+			height: 100%;
+			border: 0;
+		}
+
+		#editor1 #payment_sch_div {
+			padding-bottom: 0;
+			
+		}
+		
+		#editor1 #payment_sch {
+			padding-bottom: 0;	
+		}
 
 		#editor1 .flex_basis_49{
 			flex-basis:50%;
@@ -715,9 +738,11 @@
 			padding-right: 130px;
 		}
 
-			#editor1 #specs_div , #editor1 #whats_next_div,#editor1 #payment_sch_div{
-				margin-top:5px !important;
-			}
+		#editor1 #specs_div , #editor1 #whats_next_div,#editor1 #payment_sch_div{
+			margin-top:5px !important;
+		}
+		
+		
 	</style>
 		
 			<div class="full_width">
@@ -754,37 +779,38 @@
 							</div>		
 						</div>
 						<div class="flex_table flex_col w_38">
-						
-							<div id="terms_conditions" class="table_container flex_col border_0 mt-0 pt-0">
-								<h2>WHAT'S NEXT</h2>
+						<h2>WHAT'S NEXT</h2>
+							<div id="specs_div_2" class="flex_col">
+								<div id="terms_conditions" class="table_container flex_col border_0 mt-0 pt-0">
+									
+									
+									<div id="whats_next_div" class="table_bck flex_col border_0">
+										
+											<div class=""> <span class="flex_basis_32 text-bold">For You : &nbsp; </span>  <span id="pdf_c_whats_next_for_you" class="td_value text-left flex_1"> </span> </div>
+											<div class=""> <span class="flex_basis_32 text-bold">For Upgrade : &nbsp; </span> <span id="pdf_c_whats_next_for_upgrade" class="td_value text-left flex_1">  </span> </div>
+										
+									</div>
+								</div>	
 								
-								<div id="whats_next_div" class="table_bck flex_col border_0">
+								<div id="payment_sch" class="table_container flex_col border_0">
+									<br/>
+									<h2>TIMELINE</h2>
 									
-										<div class=""> <span class="flex_basis_32 text-bold">For You : &nbsp; </span>  <span id="pdf_c_whats_next_for_you" class="td_value text-left flex_1"> </span> </div>
-										<div class=""> <span class="flex_basis_32 text-bold">For Upgrade : &nbsp; </span> <span id="pdf_c_whats_next_for_upgrade" class="td_value text-left flex_1">  </span> </div>
-									
+									<div id="payment_sch_div" class="table_bck flex_col border_0">
+								
+															
+										<div class=""> <span class=" text-bold"> 1. Initial Design : &nbsp; </span> <span id="pdf_c_initial_design" class="td_value text-left "> </span> 				</div>
+										
+										<div class=""> <span class=" text-bold"> 2. Revisions : &nbsp; </span>  <span id="pdf_c_revisions" class="td_value text-left "> </span> 				</div>
+										
+										<div class=""> <span class=" text-bold"> 3. Approved Plan : &nbsp; </span> <span id="pdf_c_approved_plan" class="td_value text-left ">  </span> 					</div>	
+										
+								
+								
+									</div>
 								</div>
+								
 							</div>	
-							
-							<div id="payment_sch" class="table_container flex_col border_0">
-								<br/>
-								<h2>TIMELINE</h2>
-								
-								<div id="payment_sch_div" class="table_bck flex_col border_0">
-							
-														
-									<div class=""> <span class=" text-bold"> 1. Initial Design : &nbsp; </span> <span id="pdf_c_initial_design" class="td_value text-left "> </span> 				</div>
-									
-									<div class=""> <span class=" text-bold"> 2. Revisions : &nbsp; </span>  <span id="pdf_c_revisions" class="td_value text-left "> </span> 				</div>
-									
-									<div class=""> <span class=" text-bold"> 3. Approved Plan : &nbsp; </span> <span id="pdf_c_approved_plan" class="td_value text-left ">  </span> 					</div>	
-									
-							
-							
-								</div>
-							</div>
-								
-								
 								
 						
 						</div>
