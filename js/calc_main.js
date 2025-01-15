@@ -255,7 +255,7 @@ $(document).ready(function(){
 				console.log(NonEmptyInputs , appliances_split_factor);
 				
 				var appliances_items_rows =  `<h2>APPLIANCE LIST:</h2><br/>
-												<div class="flex justify-space-between">
+												<div class="flex justify-space-between bck_light_grey">
 												<div class="flex_table flex_col table_bck">
 													<div class="appliances_list">
 														<div class="flex_12 border_0"> <span id="" class="td_value text-left text-bold">Qty </span> </div>
