@@ -205,10 +205,13 @@ $(document).ready(function(){
 				
 				
 				if (project_name) {
-					jQuery('#pdf_consultation_recap').text(`Consultation Recap <br/> <span class="heading_project_name" > ${project_name} </span>`);
-				} else {
+					jQuery('#heading_project_name').text(project_name);
+				}
+				/* 
+    else {
 					jQuery('#pdf_consultation_recap').text(`Consultation Recap`);
 				}
+    */
 				
 				
 				jQuery('#pdf_c_cabinetry_type').text(cabinetry_type);
