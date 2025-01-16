@@ -257,7 +257,7 @@ $(document).ready(function(){
 				var appliances_split_factor = NonEmptyInputs <= 10 ?  half_of_NonEmptyInputs = 5 : half_of_NonEmptyInputs = half_of_NonEmptyInputs;
 				console.log(NonEmptyInputs , appliances_split_factor);
 				
-				var appliances_items_rows =  `<h2>APPLIANCE LIST</h2>
+				var appliances_items_rows =  `<h2>APPLIANCE LIST</h2><br/>
 												<div class="flex justify-space-between bck_light_grey">
 												<div class="flex_table flex_col table_bck">
 													<div class="appliances_list">
