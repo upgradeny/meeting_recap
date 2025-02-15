@@ -1,8 +1,5 @@
 
 /*--===== General Style =====--*/
-
-
-/*--===== General Style =====--*/
 @font-face {
   font-family: 'Ysabeau-VariableFont_wght'; 
   src: url('../fonts/Ysabeau-VariableFont_wght.ttf') format('truetype');
@@ -17,151 +14,116 @@ body{
 	font-family: 'Ysabeau-VariableFont_wght' , 'Mont', sans-serif;
 	font-size:16px;
 }
-
-body{
-	background:#eeeeef;
-	color:#000;
-}
-h1,h2{
-	font-family: 'Bebas Neue' !important;
-	letter-spacing :1px;
-	
-}
 .container{
-	padding:20px 0;
+	padding:10px 0;
 	color:#231f20;
 }
 .top_section{
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-	margin-bottom:20px !important;
+	text-align: center;
 }
 .price_container{
-	max-width: 800px;
+	max-width:700px;
 	margin:0 auto;
 }
 p,span,a,label,li, input::placeholder{
 	color:#000;
 }
 .input_field{
-	padding:15px 0;
-    margin-bottom: 10px;
+	padding:2px 0;
 }
 input,select{
-    padding: 4px 5px;
-	border-radius:5px;
+    padding: 2px 5px;
+	border-radius:2px;
 	height: auto;
 	max-width:100%;
-	border: 1px solid #ced4da;
-    border-radius: .25rem;
-	font-size: 14px !important;
+	border-radius:0;
+	font-size:14px;
 }
 input.form-control, select.form-control{
-	min-height: 28px;
-    padding: 4px 5px;
+	 height: auto; 
+    padding: 2px 5px;
 	color:#231f20;
+	font-size:14px;
 	
 }
-/*
-#subbrand_div label {
-	font-size: 14px !important;
+
+
+
+select{
+	font-size:14px !important;
 }
-#subbrand_div select{
-	font-size: 12px !important;
+.inline_block{
+	display:inline-block;
 }
-*/
+.flex_col{
+	display:flex;
+	flex-direction:column;
+	gap:5px;
+}
+.flex_row_inp{
+	display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex_row_inp > div{
+	flex:1;
+}
+.basis_42 label{
+	flex-basis:42%;
+}
+.basis_30 label{
+	flex-basis:30%;
+}
+.basis_50 label{
+	flex-basis:50%;
+}
+.basis_15 label{
+	flex-basis:16%;
+}
+.justify-center{
+	justify-content: center;
+}
+.align-center{
+	align-items: center;
+}
 * {
     padding: 0;
     margin: 0;
 }
-
-.h1, h1 {
-    font-size: 2.75rem;
-	color:#231f20;
+h1,h2{
+	font-family: 'Bebas Neue' !important;
+	letter-spacing :1px;
+	
+}
+h2{
+	color: #ee1c25 !important;
 }
 label {
     display: inline-block;
-    
+    margin-bottom: .25rem;
 	font-weight:bold;
     text-align: left;
-	font-size:16px;
-	margin-bottom: 2px;
-	/*
-	margin-bottom: .5rem;
-	margin-top: .5rem;
-	*/
-}
-
-.flex{
-	display:flex;
-}
-
-.estimate {
-	gap : 10px;
-    justify-content: center;
-	display:none;
-	font-size: 18px;
-    font-family: 'Montserrat';
-    font-weight: bold;
-	/*
-	font-weight:bold;
-    text-align: left;
-	font-size:18px;
-	
-	justify-content: space-around;
-	border-right: 1px solid #fff;
-	background: #000;
-    color: #fff;
-	
-	margin-bottom: .5rem;
-	margin-top: .5rem;
-	*/
-}
-.estimate span{
-	color: #000;
-}
-
-#range div{
-	padding: 0 !important;
 	font-size:14px;
-}
-
-.estimate_breakdown{
-	/*
-	display: flex;
-    justify-content: space-between;
-    border: 1px solid #fff;
-	margin-top:10px;
-	*/
-    padding: 5px 10px;
 	
-}
-
-#optional_calcs_div{
-	display:none;
-}
-div.estimate > div {
-	
-    padding: 5px 0;
-    border-right: 1px solid #fff;
-    flex: 1;
-    text-align: center;
 }
 
 .error {
     clear: both;
     display: block;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 11px;
 }
 .red, .error{
-	color:red;
+	color:#ee1c25;
 }
 
 td, th {
-    padding: 5px 20px;
+    padding: 5px 10px;
     text-align: center;
 }
 table{
@@ -173,7 +135,7 @@ th, td {
 }
 td{
 	text-align:left;
-	padding-left:15px;
+	padding-left:10px;
 }
 th.thead-dark {
     color: #fff;
@@ -181,7 +143,7 @@ th.thead-dark {
     text-align: left;
 	max-width: 28px;
 	font-weight:bold;
-	font-size:18px;
+	font-size:15px;
 }
 .text-bold{
 	font-weight:bold;
@@ -189,13 +151,6 @@ th.thead-dark {
 .text-center{
 	text-align:center;
 }
-.justify-center{
-	justify-content: center;
-}
-.justify-end{
-	justify-content: end;
-}
-    
 .text-right{
 	text-align:right;
 }
@@ -206,34 +161,47 @@ th.thead-dark {
 
 
 div#container_rows {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 h1{
-	margin: 10px auto;
-	letter-spacing:3px;
-	line-height: 42px;
+	margin: 2px auto;
+	font-size:2.25rem
 }
 h1::after {
-    text-align: center;
-    content: ' ';
-    margin: 0 auto;
+    /* text-align: center;
+    
+    margin: 5px auto 0;
+	*/
+	content: ' ';
+	margin-left: 25%;
     width: 50px;
     display: block;
     height: 2px;
     border-bottom: 2px solid #eb2227;
-	
 }
 h2{
-	text-align:left;
-	font-size:26px;
-	color: #eb2227;
+	text-align:center;
+	font-size:22px;
+	letter-spacing :1px;
 	padding:5px 0;
 	font-weight: bold;
-	margin:0;
+	color: #ee1c25;
+	/*
+	border-top:2px solid #eb2227;
+	border-bottom:2px solid #eb2227;
+	*/
+}
+.font_h2{
+	font-size:22px !important;
+	padding:5px 0;
+	font-weight: bold;
+	color: #ee1c25;
+	font-size: 22px;
+	letter-spacing :1px;
 }
 form{
-	padding:10px 0 5px;
+	padding:10px 0 15px;
 	margin: 0 auto;
 	width:100%;
 }
@@ -247,24 +215,27 @@ form{
 }
 
 .form-control:disabled, .form-control[readonly] {
-    background-color: #a83334;
+    background-color: #999;
     opacity: 1;
     color: #000;
     border: 0;
     cursor: not-allowed;
 }
 #logo{
-	max-width: 135px;
+	max-width:100px;
 }
 select, #cmd{
 	width:100%;
 }
 #resultsTable{
+	/*display:none;*/
+	height: 0px; overflow: hidden; border: none;
+}
+
+#editor{
 	display:none;
 }
-#editor1{
-	display:none;
-}
+
 /*
 .input_field_calcs div{
 	padding:0;
@@ -276,7 +247,7 @@ select, #cmd{
 }
 .dollar_sign {
     position: absolute;
-	padding: 0 10px;
+	padding: 0 5px;
 	/*
 	color: #fff;
     float: right;
@@ -290,24 +261,23 @@ select, #cmd{
 	*/
 }
 
-
+.input_field_n_dollar{
+	flex-basis: 50% !important;
+}
 .input_field_n_dollar input.form-control{
-	padding-left: 20px;
+	padding-left: 15px;
 	color:#231f20;
 }
 .input_field_n_dollar input.description {
-	padding-left:15px;
-}
-.input_field_n_dollar .dollar_sign{
-	padding: 3px 0 3px 10px;
+	padding-left:10px;
 }
 .input_field_n_dollar input.form-control,.input_field_n_dollar select.form-control,.input_field_n_dollar .dollar_sign{
-	/*height: 45px;
-	line-height: 45px;
-	border-radius:0;*/
+	height: 27px;
+	line-height: 27px;
+	/* border-radius:0; */
 }
 .btn.btn-primary{
-	padding: 12px 20px;
+/*	padding: 12px 20px; */
     background: #231f20;
     color: #fff;
 	border:0;
@@ -322,25 +292,22 @@ select, #cmd{
 	width:100%;
 }
 #cmd{
-	/* background:#eb2227; */
+	background:#eb2227;
 }
 #cmd:hover{
-	background:#000;
-	color:#fff;
+	background:#eeeeef;
+	color:#000;
 }
 .btn_plus,.btn_minus,.plus,.minus {
     border: 0;
     background: #231f20;
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
     box-sizing: border-box;
     font-weight: bold;
-    height: 45px;
-    line-height: 45px;
     border-radius: 0;
-    padding: 0 12px;
+    padding: 0 12px 3px;
     cursor: pointer;
-	width: 40px;
 }
 .plus:hover,.btn_plus:hover{
 	background: #eb2227;
@@ -396,7 +363,7 @@ button, input, optgroup, select, textarea {
     font-size: inherit;
     line-height: inherit;
 }
-.btn_l_c , .taxation_btn_l_c{
+.btn_l_c{
 	background: #231f20;
 	color:#fff;
 	border:0;
@@ -404,104 +371,44 @@ button, input, optgroup, select, textarea {
 	min-width:40px;
 	cursor:pointer;
 }
-.btn_l_c.active, .taxation_btn_l_c.active{
+.btn_l_c.active{
 	background: #eb2227 !important;
 }
-#notes_textarea{
-	width:100%;
-	background:#fff;
-	padding:5px 10px;
-	
+
+
+/*-------------------------- new styles start----------------------*/
+
+h2{
+	margin-top: 10px;
 }
-.calc_field_flex {
-    display: flex;
-    gap: 10px;
+.appliance_items_row{
+	margin:10px 0;
 }
-.calc_field_hidden {
-    flex-basis: 50%;
-    background: #fff;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    border: 1px solid #000;
+input.form-control, select.form-control , input, select{
+	 height: 35px !important;
+}
+.dollar_sign {
+    padding: 5px 5px;
 }
 
-.flex_row_inp {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    align-items: baseline;
-    justify-content: space-between;
-	padding-left: 10px;
+label {
+    font-size: 16px;
 }
-.flex_row_inp > div:nth-child(2) {
-    flex: 1;
+
+.input_field_n_dollar .dollar_sign{
+	height: 35px !important;
+	border-radius:5px;
 }
 
 .flex_col {
-	display: flex;
-    flex-direction: column;
     gap: 10px;
 }
-.flex_row_inp label {
-	flex-basis : 38%;
+
+.basis_15 label{
+	flex-basis: 25%;
 }
-.basis_38{
-	flex-basis : 38%;
+
+.minus, .btn_minus {
+    padding: 3px 14px 3px;
 }
-#price_calc_btn{
-	max-width: 200px;
-    border-radius: 25px;
-    margin: 10px auto;
-    font-family: 'Montserrat';
-    letter-spacing: 2px;
-    font-size: 16px !important;
-}
-div#range {
-    background: #000;
-    padding: 10px 15px;
-    color: #fff;
-    display: inline-block;
-    border-radius: 10px;
-}
-div#range span{
-    color: #fff;
-}
-#cmd{
-	width:auto;
-	display:inline-block;
-	padding:5px;
-	background:none;
-	color: #000;
-}
-#cmd svg{
-	width:auto;
-	height:32px;
-}
-.show_values_section{
-	display:flex;
-	justify-content : end;
-	gap : 20px;
-}
-#show_calcs{
-	cursor:pointer;
-}
-#show_calcs:hover{
-	opacity:0.8;
-}
-.hidden , .show_values_section{
-    display: none;
-}
-button.show_calc_field_hidden , .show_calc_field_hidden , .show_calc_field_hidden:focus{
-	border:0;
-	outline:0;
-}
-#range.estimate , .show_calc_field_hidden{
-	display:none;
-}
-#list_output{
-	display:none;
-}
+/*-------------------------- new styles end ----------------------*/
